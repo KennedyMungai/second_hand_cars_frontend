@@ -9,6 +9,11 @@ const Header = (props: Props) => {
 			<Link href={'/'} className='pl-8 text-xl font-bold'>
 				Second Hand Cars
 			</Link>
+			<div className='pr-8 font-semibold'>
+				<Link href='/'>Home</Link>
+				<Link href='/cars'>Cars</Link>
+				<Link href='/newcar'>New Car</Link>
+			</div>
 		</nav>
 	)
 }
