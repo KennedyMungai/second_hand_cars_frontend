@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 type Props = {}
 
 const Cars = (props: Props) => {
-	const [cars, setcars] = useState<any[]>([])
+	const [cars, setCars] = useState<any[]>([])
 	const [brand, setBrand] = useState('')
 	const [isPending, setIsPending] = useState(true)
 
@@ -14,6 +14,12 @@ const Cars = (props: Props) => {
 			.then((res) => res.json())
 			.then((json) => setcars(json))
 	}, [brand])
+
+	const handleChangeBrand = (e) => {
+		setCars([])
+		setBrand(e.target.value)
+		setIsPending(true)
+	}
 
 	return <div>Cars</div>
 }
