@@ -7,7 +7,7 @@ type Props = {}
 const Cars = (props: Props) => {
 	const [cars, setcars] = useState<any[]>([])
 	const [brand, setBrand] = useState('')
-	const [isPending, setisPending] = useState(true)
+	const [isPending, setIsPending] = useState(true)
 
 	return <div>Cars</div>
 }
