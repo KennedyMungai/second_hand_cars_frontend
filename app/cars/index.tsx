@@ -2,8 +2,8 @@ import React from 'react'
 
 type Props = {}
 
-const Cars = (props: Props) => {
+const cars = (props: Props) => {
 	return <div>Cars</div>
 }
 
-export default Cars
+export default cars
