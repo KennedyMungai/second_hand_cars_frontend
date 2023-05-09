@@ -9,6 +9,12 @@ const Cars = (props: Props) => {
 	const [brand, setBrand] = useState('')
 	const [isPending, setIsPending] = useState(true)
 
+	useEffect(() => {
+		fetch(`https://localhost:8000/cars?brand=${brand}`)
+			.then((res) => res.json())
+			.then((json) => setcars(json))
+	}, [brand])
+
 	return <div>Cars</div>
 }
 
