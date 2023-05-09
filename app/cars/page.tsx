@@ -21,7 +21,23 @@ const Cars = (props: Props) => {
 		setIsPending(true)
 	}
 
-	return <div>Cars</div>
+	return (
+		<div>
+			<h2 className='font-bold font-mono text-lg text-center my-4'>
+				Cars - {brand ? brand : 'All Brands'}
+			</h2>
+			<div className='mx-8'>
+				<label htmlFor='cars'>Choose a brand:</label>
+				<select name='cars' id='cars' onChange={handleChangeBrand}>
+					<option value=''>All Cars</option>
+					<option value='Fiat'>Fiat</option>
+					<option value='Citroen'>Citroen</option>
+					<option value='Renault'>Renault</option>
+					<option value='Opel'>Opel</option>
+				</select>
+			</div>
+		</div>
+	)
 }
 
 export default Cars
